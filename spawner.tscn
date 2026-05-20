@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://df2xccwsw504q"]
+
+[ext_resource type="Script" uid="uid://b55t0xjxcgsp2" path="res://Scripts/spawner.gd" id="1_yp5lu"]
+[ext_resource type="PackedScene" uid="uid://cttnvfc71bfhi" path="res://coel.tscn" id="2_bphdf"]
+[ext_resource type="PackedScene" uid="uid://b7vnoxfpah2l" path="res://ichthy.tscn" id="3_7ocbr"]
+[ext_resource type="PackedScene" uid="uid://02qcqxcdfq10" path="res://object.tscn" id="4_mv5bd"]
+
+[node name="Spawner" type="Node2D" unique_id=981566700]
+script = ExtResource("1_yp5lu")
+coel_scene = ExtResource("2_bphdf")
+ichthy_scene = ExtResource("3_7ocbr")
+object_scene = ExtResource("4_mv5bd")

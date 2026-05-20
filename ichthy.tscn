@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://b7vnoxfpah2l"]
+
+[ext_resource type="Script" uid="uid://dcaywgfauu6wf" path="res://Scripts/ichthy.gd" id="1_klw3u"]
+[ext_resource type="Texture2D" uid="uid://cjcyejtmglorp" path="res://bandeiraIctiossauroSprite.png" id="2_g3u4m"]
+[ext_resource type="Script" uid="uid://b3vuu3hljtll3" path="res://level.gd" id="3_cy4vo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgs1x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g3u4m"]
+font_size = 30
+
+[node name="ichthy" type="CharacterBody2D" unique_id=352600148]
+z_index = 50
+script = ExtResource("1_klw3u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1104584495]
+texture = ExtResource("2_g3u4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1496704976]
+shape = SubResource("RectangleShape2D_fgs1x")
+disabled = true
+
+[node name="Label" type="Label" parent="." unique_id=2074305628]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_left = -0.29900002
+anchor_top = -0.093
+anchor_bottom = 0.102000006
+offset_left = -230.0
+offset_top = -21.0
+offset_right = -131.0
+offset_bottom = 21.0
+label_settings = SubResource("LabelSettings_g3u4m")
+script = ExtResource("3_cy4vo")

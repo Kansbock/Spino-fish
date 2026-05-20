@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cttnvfc71bfhi"]
+
+[ext_resource type="Script" uid="uid://c00v2ip2onnu8" path="res://Scripts/coel.gd" id="1_csjdy"]
+[ext_resource type="Texture2D" uid="uid://vjuyl404pmox" path="res://celacantoSprite.png" id="2_csjdy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1fwe2"]
+radius = 21.03277
+height = 59.985382
+
+[node name="Coel" type="CharacterBody2D" unique_id=1452656188]
+collision_layer = 2
+script = ExtResource("1_csjdy")
+speed = 150.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1129725292]
+texture = ExtResource("2_csjdy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1177188361]
+position = Vector2(-53.000004, 3)
+rotation = 1.5641497
+shape = SubResource("CapsuleShape2D_1fwe2")
