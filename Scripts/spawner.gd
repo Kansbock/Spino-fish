@@ -1,11 +1,11 @@
 extends Node2D
 
 @export var coel_scene: PackedScene
+@export var salmon_scene: PackedScene
 @export var ichthy_scene: PackedScene
 @export var object_scene: PackedScene
 @export var spawn_interval := 2.0
 @export var direction := 1
-var spawns = 0
 var rng = RandomNumberGenerator.new()
 
 func _ready():
@@ -18,7 +18,7 @@ func spawn_loop():
 		var ichthy = ichthy_scene.instantiate()
 		get_tree().current_scene.add_child(ichthy)
 		ichthy.global_position = Vector2(-300, 375)
-	while spawns < 15:
+	while GameManager.fish < 15:
 		await get_tree().create_timer(spawn_interval).timeout
 		spawn()
 	if direction == 1 :
@@ -31,13 +31,13 @@ func spawn_loop():
 func spawn():
 	var random_int = rng.randi_range(0, 100)
 	if random_int < 30 :
-		spawns += 1
+		GameManager.fish += 1
 		var coel = coel_scene.instantiate()
 		get_tree().current_scene.add_child(coel)
 	
 		var screen_size = get_viewport_rect().size
 		
-		var y = randf_range(200, screen_size.y - 50)
+		var y = randf_range(230, screen_size.y - 90)
 
 		if direction == 1:
 			coel.global_position = Vector2(-50, y)
@@ -45,6 +45,21 @@ func spawn():
 		else:
 			coel.global_position = Vector2(screen_size.x + 50, y)
 			coel.direction = -1
+	if random_int > 45 && random_int <= 65 :
+		GameManager.fish += 1
+		var salmon = salmon_scene.instantiate()
+		get_tree().current_scene.add_child(salmon)
+	
+		var screen_size = get_viewport_rect().size
+		
+		var y = randf_range(230, screen_size.y - 90)
+
+		if direction == 1:
+			salmon.global_position = Vector2(-50, y)
+			salmon.direction = 1
+		else:
+			salmon.global_position = Vector2(screen_size.x + 50, y)
+			salmon.direction = -1
 	if random_int >= 30 && random_int <= 45 :
 		var log = object_scene.instantiate()
 		get_tree().current_scene.add_child(log)

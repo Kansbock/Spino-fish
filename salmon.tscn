@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bn6s4fu43f3nv"]
+
+[ext_resource type="Script" uid="uid://drujpt2d8tlcb" path="res://Scripts/salmon.gd" id="1_u0utl"]
+[ext_resource type="Texture2D" uid="uid://b0a888uupsmo5" path="res://salmãoDentesDeSabreSprite.png" id="2_u0utl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1fwe2"]
+radius = 31.979355
+height = 100.037674
+
+[node name="Salmon" type="CharacterBody2D" unique_id=1452656188]
+collision_layer = 2
+script = ExtResource("1_u0utl")
+speed = 150.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1129725292]
+texture = ExtResource("2_u0utl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1177188361]
+position = Vector2(-65.99999, 3.000002)
+rotation = 1.5641497
+shape = SubResource("CapsuleShape2D_1fwe2")

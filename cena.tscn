@@ -4,11 +4,10 @@
 [ext_resource type="Script" uid="uid://b8e0s187qumuf" path="res://Scripts/string.gd" id="1_mxkdn"]
 [ext_resource type="Texture2D" uid="uid://5bkp5v4urd0h" path="res://spinoSprite.png" id="3_w1627"]
 [ext_resource type="PackedScene" uid="uid://df2xccwsw504q" path="res://spawner.tscn" id="4_828d7"]
+[ext_resource type="PackedScene" uid="uid://bn6s4fu43f3nv" path="res://salmon.tscn" id="5_yan1i"]
+[ext_resource type="Texture2D" uid="uid://chqqdgateui57" path="res://background.jpeg" id="6_wjoo6"]
 [ext_resource type="Script" uid="uid://ksnxhf5n18yo" path="res://score.gd" id="7_w1627"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_1786k"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_2vsai"]
+[ext_resource type="Texture2D" uid="uid://cditq6xnialpq" path="res://poste1.png" id="7_yan1i"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_c3sxu"]
 
@@ -20,26 +19,6 @@ font_size = 30
 
 [node name="Scene" type="Node2D" unique_id=1973607880]
 metadata/_edit_vertical_guides_ = [-242.0]
-
-[node name="Deck" type="Sprite2D" parent="." unique_id=1796352832]
-modulate = Color(0.5372549, 0.31764707, 0.16078432, 1)
-z_index = 10
-position = Vector2(267.00003, 166)
-rotation = 3.1415927
-scale = Vector2(541.33655, -50.19377)
-texture = SubResource("CanvasTexture_1786k")
-
-[node name="Ocean" type="Sprite2D" parent="." unique_id=1789983253]
-modulate = Color(0, 0.4, 0.8, 1)
-position = Vector2(578.50946, 445.99997)
-scale = Vector2(-1164.9012, 561.2349)
-texture = SubResource("CanvasTexture_2vsai")
-
-[node name="Sky" type="Sprite2D" parent="." unique_id=1244607389]
-modulate = Color(0.5294118, 0.80784315, 0.92156863, 1)
-position = Vector2(574.49475, 82.50072)
-scale = Vector2(-1155.8822, 168.09482)
-texture = SubResource("CanvasTexture_2vsai")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1210118746]
 position = Vector2(499, 74)
@@ -77,10 +56,12 @@ texture = ExtResource("3_w1627")
 
 [node name="Spawner" parent="." unique_id=981566700 instance=ExtResource("4_828d7")]
 position = Vector2(0, 425)
+salmon_scene = ExtResource("5_yan1i")
 spawn_interval = 5.0
 
 [node name="Spawner2" parent="." unique_id=2122156658 instance=ExtResource("4_828d7")]
 position = Vector2(1158, 414)
+salmon_scene = ExtResource("5_yan1i")
 spawn_interval = 5.0
 direction = -1
 
@@ -94,5 +75,29 @@ offset_bottom = 52.0
 text = "Peixes: 0"
 label_settings = SubResource("LabelSettings_w1627")
 script = ExtResource("7_w1627")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=196174593]
+position = Vector2(576, 324.75)
+scale = Vector2(1.125, 1.0054264)
+texture = ExtResource("6_wjoo6")
+
+[node name="Poste1" type="Sprite2D" parent="." unique_id=403469143]
+z_index = 60
+position = Vector2(483.25, 392)
+scale = Vector2(1.2428567, 1.0186048)
+texture = ExtResource("7_yan1i")
+
+[node name="Poste2" type="Sprite2D" parent="." unique_id=968268224]
+z_index = 60
+position = Vector2(135.48392, 405.5)
+scale = Vector2(1.0009205, 0.9325582)
+texture = ExtResource("7_yan1i")
+
+[node name="Poste3" type="Sprite2D" parent="." unique_id=162365030]
+z_index = 60
+position = Vector2(83.00001, 188)
+rotation = 1.5707964
+scale = Vector2(1.0018419, 0.39068994)
+texture = ExtResource("7_yan1i")
 
 [connection signal="body_entered" from="Player/Rod/Bait/Area2D" to="Player/Rod/Bait" method="_on_area_2d_body_entered"]

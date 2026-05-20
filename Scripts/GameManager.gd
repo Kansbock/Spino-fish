@@ -2,6 +2,7 @@ extends Node
 
 var score := 0
 var level :=1
+var fish :=0
 signal score_changed
 signal next_level
 
