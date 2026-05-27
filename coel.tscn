@@ -16,6 +16,7 @@ speed = 150.0
 texture = ExtResource("2_csjdy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1177188361]
+visible = false
 position = Vector2(-53.000004, 3)
 rotation = 1.5641497
 shape = SubResource("CapsuleShape2D_1fwe2")

@@ -4,10 +4,9 @@
 [ext_resource type="Script" uid="uid://b8e0s187qumuf" path="res://Scripts/string.gd" id="1_mxkdn"]
 [ext_resource type="Texture2D" uid="uid://5bkp5v4urd0h" path="res://spinoSprite.png" id="3_w1627"]
 [ext_resource type="PackedScene" uid="uid://df2xccwsw504q" path="res://spawner.tscn" id="4_828d7"]
-[ext_resource type="PackedScene" uid="uid://djby53wveokm6" path="res://liopleurodon.tscn" id="8_liop"]
 [ext_resource type="PackedScene" uid="uid://bn6s4fu43f3nv" path="res://salmon.tscn" id="5_yan1i"]
 [ext_resource type="Texture2D" uid="uid://chqqdgateui57" path="res://background.jpeg" id="6_wjoo6"]
-[ext_resource type="Script" uid="uid://ksnxhf5n18yo" path="res://score.gd" id="7_w1627"]
+[ext_resource type="Script" uid="uid://ksnxhf5n18yo" path="res://Scripts/score.gd" id="7_w1627"]
 [ext_resource type="Texture2D" uid="uid://cditq6xnialpq" path="res://poste1.png" id="7_yan1i"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_c3sxu"]
@@ -76,8 +75,6 @@ offset_bottom = 52.0
 text = "Pontos: 0"
 label_settings = SubResource("LabelSettings_w1627")
 script = ExtResource("7_w1627")
-
-[node name="Liopleurodon" parent="." instance=ExtResource("8_liop")]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=196174593]
 position = Vector2(576, 361.25003)

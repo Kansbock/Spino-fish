@@ -78,21 +78,15 @@ func spawn():
 		else:
 			log.global_position = Vector2(screen_size.x + 50, y)
 			log.direction = -1
-	if random_int > 0 && random_int <= 100 :
+	if random_int > 0 && random_int <= 100: # Atenção a essa linha (veja a dica abaixo)
 		GameManager.fish += 1
 		var liopleurodon = liopleurodon_scene.instantiate()
-		get_tree().current_scene.add_child(liopleurodon)
-	
-		var screen_size = get_viewport_rect().size
 		
-		var y = randf_range(230, screen_size.y - 90)
-
-		if direction == 1:
-			liopleurodon.global_position = Vector2(-50, y)
-			liopleurodon.direction = 1
-		else:
-			liopleurodon.global_position = Vector2(screen_size.x + 50, y)
-			liopleurodon.direction = -1
+		# Define a direção antes de entrar na cena
+		liopleurodon.direction = 1 if direction == 1 else -1
+		
+		# Adiciona na cena (ele vai se posicionar sozinho no fundo usando o próprio _ready)
+		get_tree().current_scene.add_child(liopleurodon)
 func spawn_level2():
 	var random_int = rng.randi_range(0, 100)
 	if random_int < 30 :
@@ -125,21 +119,15 @@ func spawn_level2():
 		else:
 			salmon.global_position = Vector2(screen_size.x + 50, y)
 			salmon.direction = -1
-	if random_int > 65 && random_int <= 70 :
+	if random_int > 65 && random_int <= 70: # Atenção a essa linha (veja a dica abaixo)
 		GameManager.fish += 1
 		var liopleurodon = liopleurodon_scene.instantiate()
-		get_tree().current_scene.add_child(liopleurodon)
-	
-		var screen_size = get_viewport_rect().size
 		
-		var y = randf_range(230, screen_size.y - 90)
-
-		if direction == 1:
-			liopleurodon.global_position = Vector2(-50, y)
-			liopleurodon.direction = 1
-		else:
-			liopleurodon.global_position = Vector2(screen_size.x + 50, y)
-			liopleurodon.direction = -1
+		# Define a direção antes de entrar na cena
+		liopleurodon.direction = 1 if direction == 1 else -1
+		
+		# Adiciona na cena (ele vai se posicionar sozinho no fundo usando o próprio _ready)
+		get_tree().current_scene.add_child(liopleurodon)
 	if random_int >= 30 && random_int <= 45 :
 		var log = object_scene.instantiate()
 		get_tree().current_scene.add_child(log)
