@@ -6,6 +6,9 @@ extends CharacterBody2D
 @onready var player = get_node("/root/Scene/Player")
 var fish = false
 
+func _ready():
+	add_to_group("bait")
+
 func _physics_process(delta):
 	var mouse_y = get_global_mouse_position().y
 

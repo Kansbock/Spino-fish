@@ -36,7 +36,7 @@ func _physics_process(delta):
 		return
 	if target and caught and global_position.y < 200 and Input.is_action_just_pressed("click"):
 			target.fish = false
-			GameManager.add_score()
+			GameManager.add_score(1)
 			queue_free()
 	if caught and target:
 		global_position = target.global_position + Vector2(0, 10)
