@@ -7,7 +7,7 @@ extends CharacterBody2D
 @export var dodge_vertical_threshold := 120.0
 @export var hesitate_duration := 1.0
 @export var hesitate_speed_factor := 0.12
-@export var post_hesitate_speed := 300.0
+@export var post_hesitate_speed := 600.0
 
 var direction := 1
 var caught = false

@@ -1,11 +1,10 @@
-extends Node
+extends Label
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	GameManager.life_changed.connect(_on_life_changed)
+	text = "Vidas: " + str(GameManager.life)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_life_changed(new_life: int) -> void:
+	text = "Vidas: " + str(new_life)

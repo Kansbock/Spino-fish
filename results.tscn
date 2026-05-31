@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bawhd1syiw7wn"]
+
+[ext_resource type="Script" uid="uid://be74ummf14n18" path="res://results.gd" id="1_mabgl"]
+[ext_resource type="Texture2D" uid="uid://vaf6v1r1lonj" path="res://Results.jpeg" id="2_5erdf"]
+[ext_resource type="Script" uid="uid://brddy6eulg2j1" path="res://resultslabel.gd" id="3_5erdf"]
+[ext_resource type="AudioStream" uid="uid://lyewc7txrq3k" path="res://SFX/Catchin' Waves  Club Penguin OST - Club Penguin High Quality Soundtrack (youtube).mp3" id="4_e1an3"]
+
+[node name="Results" type="Control" unique_id=2079983232]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mabgl")
+
+[node name="Results" type="Sprite2D" parent="." unique_id=1284719256]
+position = Vector2(595.5, 345)
+scale = Vector2(0.9976562, 1)
+texture = ExtResource("2_5erdf")
+
+[node name="Label" type="Label" parent="." unique_id=1671294546]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 305.0
+offset_right = 498.0
+offset_bottom = 432.0
+theme_override_font_sizes/font_size = 55
+text = "Pontos"
+script = ExtResource("3_5erdf")
+
+[node name="RestartButton" type="Button" parent="." unique_id=311348032]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = 225.0
+offset_right = 147.0
+offset_bottom = 339.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"FlatButton"
+theme_override_font_sizes/font_size = 36
+text = "Menu"
+
+[node name="Catchin\'WavesClubPenguinOstClubPenguinHighQualitySoundtrack(youtube)" type="AudioStreamPlayer2D" parent="." unique_id=1202338147]
+position = Vector2(1534, 382)
+stream = ExtResource("4_e1an3")
+autoplay = true
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]

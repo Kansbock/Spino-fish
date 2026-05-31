@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://02qcqxcdfq10"]
 
 [ext_resource type="Script" uid="uid://x50mn0cm87os" path="res://Scripts/objects.gd" id="1_tjhh0"]
-[ext_resource type="Texture2D" uid="uid://bd5g38kpf601v" path="res://tocoSprite.png" id="2_hweuh"]
-[ext_resource type="Texture2D" uid="uid://b565pjy3mxdvr" path="res://toco2.png" id="3_0i3lm"]
+[ext_resource type="Texture2D" uid="uid://bd5g38kpf601v" path="res://Sprites/tocoSprite.png" id="2_hweuh"]
+[ext_resource type="Texture2D" uid="uid://b565pjy3mxdvr" path="res://Sprites/toco2.png" id="3_0i3lm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tjhh0"]
 size = Vector2(108, 126)

@@ -1,5 +1,7 @@
 extends Node2D
 
+const DUNKLEO_SCENE := preload("res://dunkleo.tscn")
+
 @export var coel_scene: PackedScene
 @export var salmon_scene: PackedScene
 @export var ichthy_scene: PackedScene
@@ -32,6 +34,24 @@ func spawn_loop():
 	while GameManager.fish < 45:
 		await get_tree().create_timer(spawn_interval).timeout
 		spawn_level2()
+
+	if direction == 1:
+		GameManager.change_level()
+		await get_tree().create_timer(5).timeout
+		spawn_dunkleo()
+
+func spawn_dunkleo():
+	# Se tiver 30 pontos ou mais, spawna o Dunkleo
+	if GameManager.score >= 30:
+		var dunkleo = DUNKLEO_SCENE.instantiate()
+		dunkleo.direction = 1 if direction == 1 else -1
+		get_tree().current_scene.add_child(dunkleo)
+	# Se tiver menos de 30 pontos, aguarda 15s e vai pra tela de resultados
+	else:
+		await get_tree().create_timer(15.0).timeout
+		get_tree().change_scene_to_file("res://results.tscn")
+	
+
 func spawn():
 	var random_int = rng.randi_range(0, 100)
 	if random_int < 30 :
@@ -78,15 +98,7 @@ func spawn():
 		else:
 			log.global_position = Vector2(screen_size.x + 50, y)
 			log.direction = -1
-	if random_int > 0 && random_int <= 100: # Atenção a essa linha (veja a dica abaixo)
-		GameManager.fish += 1
-		var liopleurodon = liopleurodon_scene.instantiate()
-		
-		# Define a direção antes de entrar na cena
-		liopleurodon.direction = 1 if direction == 1 else -1
-		
-		# Adiciona na cena (ele vai se posicionar sozinho no fundo usando o próprio _ready)
-		get_tree().current_scene.add_child(liopleurodon)
+			
 func spawn_level2():
 	var random_int = rng.randi_range(0, 100)
 	if random_int < 30 :
@@ -119,7 +131,7 @@ func spawn_level2():
 		else:
 			salmon.global_position = Vector2(screen_size.x + 50, y)
 			salmon.direction = -1
-	if random_int > 65 && random_int <= 70: # Atenção a essa linha (veja a dica abaixo)
+	if random_int > 65 && random_int <= 70: 
 		GameManager.fish += 1
 		var liopleurodon = liopleurodon_scene.instantiate()
 		

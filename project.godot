@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="Spino-Fish"
-run/main_scene="uid://d3hrnygckalts"
+run/main_scene="uid://b485r6ptnunu4"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameManager="*uid://br8aii1t326nt"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [input]
 

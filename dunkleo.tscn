@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b8dunkleo0001"]
+
+[ext_resource type="Script" uid="uid://cdmyg5jv4pvox" path="res://dunkleo.gd" id="1_dunk"]
+[ext_resource type="Texture2D" uid="uid://bxjl3gpxqerta" path="res://Sprites/dunkleosteusSprite.png" id="2_dunk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1fwe2"]
+radius = 42.985764
+height = 87.9848
+
+[node name="Dunkleo" type="CharacterBody2D" unique_id=1452656188]
+collision_layer = 2
+script = ExtResource("1_dunk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1129725292]
+texture = ExtResource("2_dunk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1177188361]
+position = Vector2(-217.99998, 22)
+rotation = 1.5641497
+shape = SubResource("CapsuleShape2D_1fwe2")

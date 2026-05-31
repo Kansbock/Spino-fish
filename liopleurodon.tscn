@@ -1,21 +1,22 @@
 [gd_scene format=3 uid="uid://djby53wveokm6"]
 
 [ext_resource type="Script" uid="uid://djeg16ln17ywv" path="res://Scripts/liopleurodon.gd" id="1_liop"]
-[ext_resource type="Texture2D" uid="uid://1osb0mkfet8q" path="res://liopleurodonSprite.png" id="2_lclrk"]
+[ext_resource type="Texture2D" uid="uid://1osb0mkfet8q" path="res://Sprites/liopleurodonSprite.png" id="2_lclrk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_liop"]
-radius = 48.0
-height = 258.0
+radius = 79.0
+height = 274.0
 
 [node name="Liopleurodon" type="CharacterBody2D" unique_id=905864158]
 z_index = 10
+collision_layer = 8
+collision_mask = 0
 script = ExtResource("1_liop")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=793220804]
 texture = ExtResource("2_lclrk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=737063884]
-position = Vector2(-232, -58)
+position = Vector2(-234, -25)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_liop")
-disabled = true

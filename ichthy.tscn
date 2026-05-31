@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b7vnoxfpah2l"]
 
 [ext_resource type="Script" uid="uid://dcaywgfauu6wf" path="res://Scripts/ichthy.gd" id="1_klw3u"]
-[ext_resource type="Texture2D" uid="uid://cjcyejtmglorp" path="res://bandeiraIctiossauroSprite.png" id="2_g3u4m"]
+[ext_resource type="Texture2D" uid="uid://cjcyejtmglorp" path="res://Sprites/bandeiraIctiossauroSprite.png" id="2_g3u4m"]
 [ext_resource type="Script" uid="uid://b3vuu3hljtll3" path="res://Scripts/level.gd" id="3_cy4vo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fgs1x"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cttnvfc71bfhi"]
 
 [ext_resource type="Script" uid="uid://c00v2ip2onnu8" path="res://Scripts/coel.gd" id="1_csjdy"]
-[ext_resource type="Texture2D" uid="uid://vjuyl404pmox" path="res://celacantoSprite.png" id="2_csjdy"]
+[ext_resource type="Texture2D" uid="uid://vjuyl404pmox" path="res://Sprites/celacantoSprite.png" id="2_csjdy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1fwe2"]
 radius = 21.03277

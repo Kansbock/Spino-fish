@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bn6s4fu43f3nv"]
 
 [ext_resource type="Script" uid="uid://drujpt2d8tlcb" path="res://Scripts/salmon.gd" id="1_u0utl"]
-[ext_resource type="Texture2D" uid="uid://b0a888uupsmo5" path="res://salmãoDentesDeSabreSprite.png" id="2_u0utl"]
+[ext_resource type="Texture2D" uid="uid://b0a888uupsmo5" path="res://Sprites/salmãoDentesDeSabreSprite.png" id="2_u0utl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1fwe2"]
 radius = 31.979355
